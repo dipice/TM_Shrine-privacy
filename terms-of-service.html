@@ -13,6 +13,22 @@
             padding: 20px;
             color: #333;
             background-color: #E8E8E8;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('sando_vga.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: -1;
+            pointer-events: none;
         }
         h1 {
             color: #B22222;
@@ -170,7 +186,9 @@
     </div>
 
     <div class="footer">
-        <p>&copy; 2025 Daiji Imai</p>
+        <img src="tokoyomusubi_shrine_singaku.png" alt="TokoyoMusubi Shrine" style="width: 80px; margin-bottom: 10px;">
+        <p style="margin: 5px 0;">TokoyoMusubi Shrine</p>
+        <p style="font-size: 0.75em; color: #999;">&copy; 2025 Daiji Imai</p>
     </div>
 
 </body>
