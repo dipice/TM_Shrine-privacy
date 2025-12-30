@@ -117,13 +117,13 @@
     <h2>1. Information I Collect</h2>
 
     <h3>1.1 Information You Provide</h3>
-    <p>TokoyoMusubi Shrine does not require you to create an account or provide personal information.</p>
-    <p>The app stores only limited, non-personal data locally on your device, such as:</p>
+    <p>TokoyoMusubi Shrine does not require you to create an account or provide personal information. The app uses anonymous authentication (Firebase Authentication) to sync your progress, but no personally identifiable information is collected.</p>
+    <p>The app stores the following types of data:</p>
     <ul>
-        <li>App preferences and settings</li>
-        <li>In-app item status (e.g. remaining counts or cooldown timing)</li>
+        <li>App preferences and settings (stored locally on your device)</li>
+        <li>In-app item status, omikuji history, and worship statistics (stored in the cloud via Firebase)</li>
     </ul>
-    <p>This data is used solely to support the operation of the app and is not transmitted to external servers.</p>
+    <p>Cloud data is linked to an anonymous user ID and does not contain any personal information.</p>
 
     <h3>1.2 Information Related to Advertising</h3>
     <p>The app displays advertisements using third-party services. These services may collect certain information automatically in accordance with their own privacy policies, such as:</p>
@@ -134,11 +134,35 @@
     </ul>
     <p>TokoyoMusubi Shrine does not directly access, store, or control this information.</p>
 
-    <h2>2. Camera Usage</h2>
+    <h2>2. Face Data</h2>
     <div class="highlight-box">
-        <p>This app uses your device camera to support gesture-based interactions during worship (such as bowing).</p>
-        <p>All camera processing is performed <strong>entirely on your device</strong> using on-device machine learning technology (Google ML Kit).</p>
-        <p>Camera images and facial detection data are <strong>not recorded, stored, or transmitted</strong> to external servers.</p>
+        <h3>What Face Data Is Collected</h3>
+        <p>This app uses on-device face detection (Google ML Kit) to detect:</p>
+        <ul>
+            <li>Face position and head tilt (for bow detection)</li>
+            <li>Eye open/closed state (for prayer detection)</li>
+        </ul>
+        <p>This data is processed <strong>entirely on your device</strong> in real-time.</p>
+
+        <h3>How Face Data Is Used</h3>
+        <p>Face data is used solely to detect gestures during worship (bowing and prayer). It is not used for identification or any other purpose.</p>
+
+        <h3>Data Storage</h3>
+        <p>Face data is processed in memory only and is <strong>not stored on your device or any server</strong>.</p>
+
+        <h3>Data Retention</h3>
+        <p>Face data is <strong>discarded immediately</strong> after each frame is processed. No face data is retained.</p>
+
+        <h3>Third-Party Sharing</h3>
+        <p>Face data is <strong>not shared with any third parties</strong>. No images or facial feature data are transmitted to external servers.</p>
+
+        <h3>Aggregated Statistics</h3>
+        <p>The app records aggregated, non-identifiable statistics such as:</p>
+        <ul>
+            <li>Number of successful bows</li>
+            <li>Total seconds with eyes closed during prayer</li>
+        </ul>
+        <p>These statistics are stored in Firebase (cloud service) and linked to an anonymous user ID. They do not contain any facial images or biometric data.</p>
     </div>
 
     <h2>3. Third-Party Services</h2>
@@ -164,6 +188,20 @@
         <li><a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a></li>
     </ul>
 
+    <h3>3.4 Firebase Services</h3>
+    <p>This app uses Firebase (provided by Google) for the following purposes:</p>
+    <ul>
+        <li><strong>Firebase Authentication</strong>: Anonymous sign-in to sync your progress across sessions</li>
+        <li><strong>Cloud Firestore</strong>: Storing your app data (omikuji history, worship statistics) in the cloud</li>
+        <li><strong>Firebase Analytics</strong>: Understanding app usage patterns to improve the experience (opt-in only)</li>
+        <li><strong>Firebase Crashlytics</strong>: Collecting crash reports to improve app stability (opt-in only)</li>
+        <li><strong>Firebase Cloud Messaging</strong>: Delivering push notifications about updates and announcements</li>
+    </ul>
+    <p>Data is stored on Google's servers. For details, please refer to:</p>
+    <ul>
+        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
+    </ul>
+
     <h2>4. Your Privacy Choices</h2>
 
     <h3>Camera Permission</h3>
@@ -176,7 +214,9 @@
     </ul>
 
     <h2>5. Data Retention</h2>
-    <p>Most app data is stored locally on your device. Uninstalling the app will remove this data.</p>
+    <p>Local app data is stored on your device and will be removed when you uninstall the app.</p>
+    <p>Cloud data (stored in Firebase) is retained as long as your anonymous account exists. If you wish to delete your cloud data, please contact us via email.</p>
+    <p>Face data is not retained; it is discarded immediately after processing each camera frame.</p>
 
     <h2>6. International Data Handling</h2>
     <p>Third-party services may process data in countries outside your own, including the United States, in accordance with their privacy policies.</p>
