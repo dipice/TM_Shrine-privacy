@@ -110,20 +110,20 @@
     </div>
 
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last Updated: December 2025</p>
+    <p class="last-updated">Last Updated: January 2026</p>
 
     <p>This Privacy Policy explains how TokoyoMusubi Shrine handles information when you use this mobile application.</p>
 
     <h2>1. Information I Collect</h2>
 
     <h3>1.1 Information You Provide</h3>
-    <p>TokoyoMusubi Shrine does not require you to create an account or provide personal information. The app uses anonymous authentication (Firebase Authentication) to sync your progress, but no personally identifiable information is collected.</p>
+    <p>TokoyoMusubi Shrine does not require you to create an account or provide personal contact information such as your name, email address, or phone number.</p>
+    <p>The app uses anonymous authentication (Firebase Authentication) to sync your progress. This generates a random anonymous user ID that is not linked to your identity.</p>
     <p>The app stores the following types of data:</p>
     <ul>
         <li>App preferences and settings (stored locally on your device)</li>
-        <li>In-app item status, omikuji history, and worship statistics (stored in the cloud via Firebase)</li>
+        <li>In-app item status, omikuji history, and worship statistics (stored in the cloud via Firebase, linked to your anonymous user ID)</li>
     </ul>
-    <p>Cloud data is linked to an anonymous user ID and does not contain any personal information.</p>
 
     <h3>1.2 Information Related to Advertising</h3>
     <p>The app displays advertisements using third-party services. These services may collect certain information automatically in accordance with their own privacy policies, such as:</p>
@@ -137,7 +137,7 @@
     <h2>2. Face Data</h2>
     <div class="highlight-box">
         <h3>What Face Data Is Collected</h3>
-        <p>This app uses on-device face detection (Google ML Kit) to detect:</p>
+        <p>This app uses on-device face detection to detect:</p>
         <ul>
             <li>Face position and head tilt (for bow detection)</li>
             <li>Eye open/closed state (for prayer detection)</li>
@@ -156,19 +156,29 @@
         <h3>Third-Party Sharing</h3>
         <p>Face data is <strong>not shared with any third parties</strong>. No images or facial feature data are transmitted to external servers.</p>
 
-        <h3>Aggregated Statistics</h3>
-        <p>The app records aggregated, non-identifiable statistics such as:</p>
+        <h3>Usage Statistics</h3>
+        <p>The app records cumulative usage statistics for your account, such as:</p>
         <ul>
             <li>Number of successful bows</li>
             <li>Total seconds with eyes closed during prayer</li>
         </ul>
-        <p>These statistics are stored in Firebase (cloud service) and linked to an anonymous user ID. They do not contain any facial images or biometric data.</p>
+        <p>These statistics are stored in Firebase (cloud service) and linked to your anonymous user ID. They do not contain any facial images or biometric data.</p>
     </div>
 
     <h2>3. Third-Party Services</h2>
 
-    <h3>3.1 Google ML Kit</h3>
-    <p>Used for on-device gesture and face detection. All processing occurs locally on the device.</p>
+    <h3>3.1 Face Detection Technologies</h3>
+    <p>This app uses the following technologies for on-device face detection. All processing occurs locally on your device.</p>
+
+    <h4>Apple ARKit (iOS)</h4>
+    <p>On iOS devices with TrueDepth camera (Face ID-enabled devices), the app uses Apple ARKit for high-precision face tracking. ARKit processes facial data entirely on your device.</p>
+    <ul>
+        <li><a href="https://developer.apple.com/documentation/arkit" target="_blank">ARKit Documentation</a></li>
+        <li><a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a></li>
+    </ul>
+
+    <h4>Google ML Kit (iOS fallback / Android)</h4>
+    <p>On iOS devices without TrueDepth camera and on all Android devices, the app uses Google ML Kit for face detection.</p>
     <ul>
         <li><a href="https://developers.google.com/ml-kit/terms" target="_blank">Google ML Kit Terms of Service</a></li>
         <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
@@ -193,6 +203,7 @@
     <ul>
         <li><strong>Firebase Authentication</strong>: Anonymous sign-in to sync your progress across sessions</li>
         <li><strong>Cloud Firestore</strong>: Storing your app data (omikuji history, worship statistics) in the cloud</li>
+        <li><strong>Firebase Remote Config</strong>: Delivering app configuration updates without requiring an app update</li>
         <li><strong>Firebase Analytics</strong>: Understanding app usage patterns to improve the experience (opt-in only)</li>
         <li><strong>Firebase Crashlytics</strong>: Collecting crash reports to improve app stability (opt-in only)</li>
         <li><strong>Firebase Cloud Messaging</strong>: Delivering push notifications about updates and announcements</li>
