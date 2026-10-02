@@ -111,22 +111,20 @@
     </div>
 
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last Updated: September 2026</p>
+    <p class="last-updated">Last Updated: October 2, 2026</p>
 
     <p>This Privacy Policy explains how TokoyoMusubi Shrine handles information when you use this mobile application.</p>
 
     <h2>1. Information I Collect</h2>
 
     <h3>1.1 Information You Provide</h3>
-    <p>TokoyoMusubi Shrine does not require you to create an account or provide personal contact information such as your name, email address, or phone number.</p>
-    <p>The app uses anonymous authentication (Firebase Authentication) to sync your progress. This generates a random anonymous user ID that is not linked to your identity.</p>
-    <p>The app stores the following types of data:</p>
+    <p>You do not need to register your name or contact details. The app uses anonymous authentication (Firebase Authentication) and stores the following information linked to your anonymous user ID:</p>
     <ul>
-        <li>App preferences and settings (stored locally on your device)</li>
-        <li>In-app item status, omikuji history, and worship statistics (stored in the cloud via Firebase, linked to your anonymous user ID)</li>
-        <li>Omikuji reading results; messages sent and responses received in conversations with the girl; the girl's wish and the words of omikuji related to those conversations; and conversation progress (stored in Firebase and linked to your anonymous user ID)</li>
+        <li>Progress, balances, and records of purchases, worship, and omikuji</li>
+        <li>Readings, conversations with the girl, and reports</li>
+        <li>Records such as conversation counts and topic usage, to continue conversations and avoid repetition</li>
     </ul>
-    <p>We use this information to retrieve results, resume interrupted conversations, and prevent duplicate use of Omikuji Tokens or Go-enn Coins.</p>
+    <p>App preferences and settings are stored locally on your device.</p>
     <p>Negikoto (your own prayer words) are stored on your device. When a reading is generated, the Negikoto in use is sent for that purpose, and its content may appear in the generated reading.</p>
 
     <h2>2. Face Data</h2>
@@ -183,13 +181,13 @@
     <p>This app uses Firebase (provided by Google) for the following purposes:</p>
     <ul>
         <li><strong>Firebase Authentication</strong>: Anonymous sign-in to sync your progress across sessions</li>
-        <li><strong>Cloud Firestore</strong>: Storing your app data (omikuji history, worship statistics) in the cloud</li>
+        <li><strong>Cloud Firestore</strong>: Storing the information described in Section 1.1 in the cloud</li>
         <li><strong>Firebase Remote Config</strong>: Delivering app configuration updates without requiring an app update</li>
         <li><strong>Firebase Analytics</strong>: Understanding app usage patterns to improve the experience (opt-in only)</li>
         <li><strong>Firebase Crashlytics</strong>: Collecting crash reports to improve app stability (opt-in only)</li>
-        <li><strong>Firebase Cloud Messaging</strong>: Delivering push notifications about updates and announcements</li>
+        <li><strong>Firebase Cloud Messaging</strong>: Managing notification tokens and settings and delivering push notifications about updates and announcements</li>
     </ul>
-    <p>Data is stored on Google's servers. For details, please refer to:</p>
+    <p>Firebase is used for anonymous authentication, storing the information described above, providing app features, deleting information after its retention period, and managing notification tokens and settings. Data is stored on Google's servers. Even with an anonymous ID, information you enter or purchase information may relate to an individual. For details, please refer to:</p>
     <ul>
         <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
     </ul>
@@ -198,7 +196,7 @@
     <p>This app uses RevenueCat for subscription and in-app purchase management.</p>
     <ul>
         <li><strong>Purchase Processing</strong>: RevenueCat validates purchase receipts and manages subscription status</li>
-        <li><strong>Anonymous User ID</strong>: An anonymous identifier is used to track purchases (not linked to your identity)</li>
+        <li><strong>User ID</strong>: Purchase information is linked to your user ID. Even with an anonymous ID, purchase information may relate to an individual.</li>
         <li><strong>Subscription Restoration</strong>: Purchase history is stored on RevenueCat servers, enabling subscription restoration across reinstalls via the "Restore Purchases" feature</li>
     </ul>
     <p>Note: Go-enn Coin balances are stored on Firebase servers and linked to your anonymous app account. You may be unable to carry over your Go-enn Coins after reinstalling the app, changing devices, or similar changes. Restoring your subscription through RevenueCat does not guarantee restoration of your coin balance.</p>
@@ -207,15 +205,20 @@
         <li><a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a></li>
     </ul>
 
-    <h3>3.5 Google Gemini</h3>
-    <p>The App uses Google's Gemini service to generate omikuji readings and responses from the girl. It sends information needed for generation, which may include prayers and wishes, the words of omikuji, messages to the girl, and the preceding conversation. If the text you enter includes information that could identify a person, that information will also be sent, so please do not enter it.</p>
-    <p>Google's Terms of Service and Privacy Policy apply to Google's handling of this information.</p>
+    <h3>3.5 AI Services</h3>
+    <p>The app uses Google Gemini for readings and the OpenAI API for conversations with the girl, including conversations after drawing an omikuji. Messages are used to generate and adjust responses to fit the flow of the conversation.</p>
+    <p>Gemini receives the words of the wish and omikuji. OpenAI receives the current and immediately preceding messages, the girl's responses, and other information about the flow of the conversation. Depending on the conversation, the words of the wish and omikuji and the reading results are also sent. Please do not enter information that could identify a person, such as a name, address, or contact details. If you enter it, that information may also be sent.</p>
+    <p>Each provider may retain information under its own terms and privacy policies. This retention is separate from deletion by the app.</p>
     <ul>
         <li><a href="https://ai.google.dev/gemini-api/terms" target="_blank">Gemini API Additional Terms of Service</a></li>
         <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+        <li><a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank">OpenAI API Data Controls</a></li>
     </ul>
 
     <h2>4. Your Privacy Choices</h2>
+
+    <h3>Improvement Support</h3>
+    <p>You can change your participation in usage analytics and crash diagnostics through the "Improvement Support" option in Settings. Information needed to provide features such as authentication, purchases, notifications, and AI generation is handled separately from this setting.</p>
 
     <h3>Camera Permission</h3>
     <p>You may control camera access through your device settings. If camera access is disabled, gesture-based features will be unavailable.</p>
@@ -225,9 +228,11 @@
 
     <h2>5. Data Retention</h2>
     <p>Local app data is stored on your device and will be removed when you uninstall the app.</p>
-    <p>Results of standard omikuji readings are deleted on a rolling basis after 24 hours have elapsed from the start of processing. Records of conversations with the girl are deleted on a rolling basis after 24 hours have elapsed from the time the omikuji used for the conversation is drawn. A conversation with the girl can be resumed within 12 hours of its start. Processing records used to prevent duplicate use of Omikuji Tokens or Go-enn Coins are retained separately, without the content of the reading or conversation.</p>
-    <p>Google's handling of information by Gemini is governed by the Google terms described above.</p>
-    <p>Other cloud data, such as Go-enn Coin balances and worship records, is retained in association with your anonymous account. If you wish to delete your cloud data, please contact us via email.</p>
+    <p>The text of readings and conversations is deleted by a scheduled process after 24 hours have elapsed from the start of each respective processing operation. This includes the words of the wish and omikuji and the reading results. Adding messages does not extend the retention period. Deletion may be delayed depending on processing conditions.</p>
+    <p>Text and additional details submitted in a report are retained for 90 days from submission for review and improvement, then deleted by a scheduled process. A copy included in a report is retained for this period even after the regular reading or conversation text is deleted.</p>
+    <p>Conversation records other than the text are retained separately, linked to your anonymous account, to continue conversations and avoid repetition. They are not all deleted as part of the 24-hour text deletion. Other data, such as balances and worship records, is also retained in association with your anonymous account.</p>
+    <p>For inquiries about deletion of cloud data, please contact us via email. Backups and similar copies follow each service's retention and recovery procedures; immediate deletion of all copies is not guaranteed.</p>
+    <p>AI providers may retain information separately, as described in Section 3.5.</p>
     <p>Face data is not retained; it is discarded immediately after processing each camera frame.</p>
 
     <h2>6. International Data Handling</h2>
